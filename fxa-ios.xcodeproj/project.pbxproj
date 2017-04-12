@@ -22,7 +22,6 @@
 		23EAF6651E9ECB7E00C6EBAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
 		23EAF6661E9ECB7E00C6EBAB /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */; };
 		23EDEF8E1E9EE02F00F530CF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 23EDEF8D1E9EE02F00F530CF /* Shared */; };
-		23EDEF901E9EE08500F530CF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 23EDEF8F1E9EE08500F530CF /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		23EDEF8D1E9EE02F00F530CF /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
-		23EDEF8F1E9EE08500F530CF /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
-				23EDEF8F1E9EE08500F530CF /* Shared */,
 				23EDEF8D1E9EE02F00F530CF /* Shared */,
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
@@ -225,7 +222,6 @@
 				23EAF6531E9DAF4800C6EBAB /* Account in Resources */,
 				23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */,
 				23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */,
-				23EDEF901E9EE08500F530CF /* Shared in Resources */,
 				23EDEF8E1E9EE02F00F530CF /* Shared in Resources */,
 				23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */,
 				23EAF6611E9EC9A600C6EBAB /* Carthage in Resources */,
