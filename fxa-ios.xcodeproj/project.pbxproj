@@ -14,6 +14,7 @@
 		23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6391E9DAEB100C6EBAB /* LaunchScreen.storyboard */; };
 		23EAF6461E9DAEB100C6EBAB /* fxa_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6451E9DAEB100C6EBAB /* fxa_iosTests.swift */; };
 		23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */; };
+		23EAF6531E9DAF4800C6EBAB /* Account in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6521E9DAF4800C6EBAB /* Account */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		23EAF6451E9DAEB100C6EBAB /* fxa_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fxa_iosTests.swift; sourceTree = "<group>"; };
 		23EAF6471E9DAEB100C6EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
+		23EAF6521E9DAF4800C6EBAB /* Account */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Account; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
+				23EAF6521E9DAF4800C6EBAB /* Account */,
 				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
 				23EAF6441E9DAEB100C6EBAB /* fxa-iosTests */,
@@ -183,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAF6531E9DAF4800C6EBAB /* Account in Resources */,
 				23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */,
 				23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */,
 				23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */,
