@@ -15,6 +15,11 @@
 		23EAF6461E9DAEB100C6EBAB /* fxa_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6451E9DAEB100C6EBAB /* fxa_iosTests.swift */; };
 		23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */; };
 		23EAF6531E9DAF4800C6EBAB /* Account in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6521E9DAF4800C6EBAB /* Account */; };
+		23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6581E9EA90D00C6EBAB /* Profile.swift */; };
+		23EAF65B1E9EAA0E00C6EBAB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */; };
+		23EAF65D1E9EC82800C6EBAB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65C1E9EC82800C6EBAB /* Cartfile */; };
+		23EAF6601E9EC9A600C6EBAB /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */; };
+		23EAF6611E9EC9A600C6EBAB /* Carthage in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65F1E9EC9A600C6EBAB /* Carthage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		23EAF6471E9DAEB100C6EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
 		23EAF6521E9DAF4800C6EBAB /* Account */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Account; sourceTree = "<group>"; };
+		23EAF6581E9EA90D00C6EBAB /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		23EAF65C1E9EC82800C6EBAB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		23EAF65F1E9EC9A600C6EBAB /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
+				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
+				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
+				23EAF65F1E9EC9A600C6EBAB /* Carthage */,
+				23EAF6581E9EA90D00C6EBAB /* Profile.swift */,
+				23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */,
 				23EAF6521E9DAF4800C6EBAB /* Account */,
 				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
@@ -186,10 +201,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAF65D1E9EC82800C6EBAB /* Cartfile in Resources */,
+				23EAF6601E9EC9A600C6EBAB /* Cartfile.resolved in Resources */,
 				23EAF6531E9DAF4800C6EBAB /* Account in Resources */,
 				23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */,
 				23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */,
 				23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */,
+				23EAF6611E9EC9A600C6EBAB /* Carthage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAF65B1E9EAA0E00C6EBAB /* Logger.swift in Sources */,
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
+				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
 			);
@@ -419,6 +439,7 @@
 				23EAF64C1E9DAEB100C6EBAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23EAF64D1E9DAEB100C6EBAB /* Build configuration list for PBXNativeTarget "fxa-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +448,7 @@
 				23EAF64F1E9DAEB100C6EBAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
