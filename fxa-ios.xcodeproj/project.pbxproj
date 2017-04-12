@@ -16,12 +16,13 @@
 		23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */; };
 		23EAF6531E9DAF4800C6EBAB /* Account in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6521E9DAF4800C6EBAB /* Account */; };
 		23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6581E9EA90D00C6EBAB /* Profile.swift */; };
-		23EAF65B1E9EAA0E00C6EBAB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */; };
 		23EAF65D1E9EC82800C6EBAB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65C1E9EC82800C6EBAB /* Cartfile */; };
 		23EAF6601E9EC9A600C6EBAB /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */; };
 		23EAF6611E9EC9A600C6EBAB /* Carthage in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65F1E9EC9A600C6EBAB /* Carthage */; };
 		23EAF6651E9ECB7E00C6EBAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
 		23EAF6661E9ECB7E00C6EBAB /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */; };
+		23EDEF8E1E9EE02F00F530CF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 23EDEF8D1E9EE02F00F530CF /* Shared */; };
+		23EDEF901E9EE08500F530CF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 23EDEF8F1E9EE08500F530CF /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,12 +49,13 @@
 		23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
 		23EAF6521E9DAF4800C6EBAB /* Account */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Account; sourceTree = "<group>"; };
 		23EAF6581E9EA90D00C6EBAB /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		23EAF65C1E9EC82800C6EBAB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		23EAF65F1E9EC9A600C6EBAB /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 		23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
+		23EDEF8D1E9EE02F00F530CF /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
+		23EDEF8F1E9EE08500F530CF /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +81,12 @@
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
+				23EDEF8F1E9EE08500F530CF /* Shared */,
+				23EDEF8D1E9EE02F00F530CF /* Shared */,
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
 				23EAF65F1E9EC9A600C6EBAB /* Carthage */,
 				23EAF6581E9EA90D00C6EBAB /* Profile.swift */,
-				23EAF65A1E9EAA0E00C6EBAB /* Logger.swift */,
 				23EAF6521E9DAF4800C6EBAB /* Account */,
 				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
@@ -222,6 +225,8 @@
 				23EAF6531E9DAF4800C6EBAB /* Account in Resources */,
 				23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */,
 				23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */,
+				23EDEF901E9EE08500F530CF /* Shared in Resources */,
+				23EDEF8E1E9EE02F00F530CF /* Shared in Resources */,
 				23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */,
 				23EAF6611E9EC9A600C6EBAB /* Carthage in Resources */,
 			);
@@ -241,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23EAF65B1E9EAA0E00C6EBAB /* Logger.swift in Sources */,
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
 				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
