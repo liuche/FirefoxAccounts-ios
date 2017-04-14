@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -133,6 +134,7 @@
 
 /* Begin PBXFileReference section */
 		230DFB221EA05D520051A811 /* FxA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FxA.xcodeproj; path = FxA/FxA.xcodeproj; sourceTree = "<group>"; };
+		230DFB2B1EA05E1B0051A811 /* Deferred.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Deferred.framework; path = Carthage/Build/iOS/Deferred.framework; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +310,7 @@
 		23EAF6621E9ECB7E00C6EBAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				230DFB2B1EA05E1B0051A811 /* Deferred.framework */,
 				23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */,
 				23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */,
 			);
@@ -1019,6 +1023,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Account/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1041,6 +1049,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Account/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
