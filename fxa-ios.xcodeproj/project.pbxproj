@@ -14,6 +14,8 @@
 		230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB321EA05FA80051A811 /* PushRegistration.swift */; };
 		230DFB371EA05FF70051A811 /* FirefoxAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */; };
 		230DFB381EA063280051A811 /* FxA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; };
+		230DFB551EA0709D0051A811 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB511EA0709D0051A811 /* Error.swift */; };
+		230DFB581EA0709D0051A811 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB541EA0709D0051A811 /* Result.swift */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -157,6 +159,9 @@
 		230DFB301EA05FA80051A811 /* PushConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushConfiguration.swift; path = Push/PushConfiguration.swift; sourceTree = "<group>"; };
 		230DFB311EA05FA80051A811 /* PushCrypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushCrypto.swift; path = Push/PushCrypto.swift; sourceTree = "<group>"; };
 		230DFB321EA05FA80051A811 /* PushRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushRegistration.swift; path = Push/PushRegistration.swift; sourceTree = "<group>"; };
+		230DFB431EA067730051A811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		230DFB511EA0709D0051A811 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		230DFB541EA0709D0051A811 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +263,7 @@
 		230DFB211EA05D360051A811 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				230DFB501EA0709D0051A811 /* Result */,
 				230DFB221EA05D520051A811 /* FxA.xcodeproj */,
 			);
 			name = ThirdParty;
@@ -281,6 +287,16 @@
 				230DFB321EA05FA80051A811 /* PushRegistration.swift */,
 			);
 			name = Push;
+			sourceTree = "<group>";
+		};
+		230DFB501EA0709D0051A811 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				230DFB511EA0709D0051A811 /* Error.swift */,
+				230DFB541EA0709D0051A811 /* Result.swift */,
+			);
+			name = Result;
+			path = ThirdParty/Result;
 			sourceTree = "<group>";
 		};
 		23EAF6241E9DAEB100C6EBAB = {
@@ -675,7 +691,9 @@
 				230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */,
 				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
+				230DFB551EA0709D0051A811 /* Error.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
+				230DFB581EA0709D0051A811 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
