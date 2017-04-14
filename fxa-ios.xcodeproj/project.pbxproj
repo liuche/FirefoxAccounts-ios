@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
+		230DFB331EA05FA80051A811 /* PushClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB2F1EA05FA80051A811 /* PushClient.swift */; };
+		230DFB341EA05FA80051A811 /* PushConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB301EA05FA80051A811 /* PushConfiguration.swift */; };
+		230DFB351EA05FA80051A811 /* PushCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB311EA05FA80051A811 /* PushCrypto.swift */; };
+		230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB321EA05FA80051A811 /* PushRegistration.swift */; };
+		230DFB371EA05FF70051A811 /* FirefoxAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */; };
+		230DFB381EA063280051A811 /* FxA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -21,11 +27,9 @@
 		23EAF6651E9ECB7E00C6EBAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
 		23EAF6661E9ECB7E00C6EBAB /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */; };
 		23EDEFE71E9EE72B00F530CF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; };
-		23EDEFEE1E9EE72B00F530CF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDEFED1E9EE72B00F530CF /* SharedTests.swift */; };
 		23EDEFF31E9EE72B00F530CF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; };
 		23EDEFF41E9EE72B00F530CF /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23EDF00A1E9EE73700F530CF /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; };
-		23EDF0111E9EE73700F530CF /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0101E9EE73700F530CF /* AccountTests.swift */; };
 		23EDF0161E9EE73700F530CF /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; };
 		23EDF0171E9EE73700F530CF /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23EDF02B1E9EE74500F530CF /* Account-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EDF01E1E9EE74500F530CF /* Account-Bridging-Header.h */; };
@@ -65,6 +69,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 28F9520619D0F9FB00DCE892;
 			remoteInfo = FxATests;
+		};
+		230DFB4C1EA06E860051A811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23EDEFDD1E9EE72B00F530CF;
+			remoteInfo = Shared;
+		};
+		230DFB4E1EA06F250051A811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F951FA19D0F9FA00DCE892;
+			remoteInfo = FxA;
 		};
 		23EAF6421E9DAEB100C6EBAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -135,6 +153,10 @@
 /* Begin PBXFileReference section */
 		230DFB221EA05D520051A811 /* FxA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FxA.xcodeproj; path = FxA/FxA.xcodeproj; sourceTree = "<group>"; };
 		230DFB2B1EA05E1B0051A811 /* Deferred.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Deferred.framework; path = Carthage/Build/iOS/Deferred.framework; sourceTree = "<group>"; };
+		230DFB2F1EA05FA80051A811 /* PushClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushClient.swift; path = Push/PushClient.swift; sourceTree = "<group>"; };
+		230DFB301EA05FA80051A811 /* PushConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushConfiguration.swift; path = Push/PushConfiguration.swift; sourceTree = "<group>"; };
+		230DFB311EA05FA80051A811 /* PushCrypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushCrypto.swift; path = Push/PushCrypto.swift; sourceTree = "<group>"; };
+		230DFB321EA05FA80051A811 /* PushRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushRegistration.swift; path = Push/PushRegistration.swift; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,13 +175,9 @@
 		23EAF6641E9ECB7E00C6EBAB /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		23EDEFDE1E9EE72B00F530CF /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EDEFE61E9EE72B00F530CF /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23EDEFED1E9EE72B00F530CF /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
-		23EDEFEF1E9EE72B00F530CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EDF0011E9EE73600F530CF /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EDF0041E9EE73700F530CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EDF0091E9EE73700F530CF /* AccountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23EDF0101E9EE73700F530CF /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
-		23EDF0121E9EE73700F530CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EDF01E1E9EE74500F530CF /* Account-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account-Bridging-Header.h"; sourceTree = "<group>"; };
 		23EDF0201E9EE74500F530CF /* FirefoxAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirefoxAccount.swift; sourceTree = "<group>"; };
 		23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirefoxAccountConfiguration.swift; sourceTree = "<group>"; };
@@ -222,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */,
+				230DFB381EA063280051A811 /* FxA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +272,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		230DFB2E1EA05F920051A811 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				230DFB2F1EA05FA80051A811 /* PushClient.swift */,
+				230DFB301EA05FA80051A811 /* PushConfiguration.swift */,
+				230DFB311EA05FA80051A811 /* PushCrypto.swift */,
+				230DFB321EA05FA80051A811 /* PushRegistration.swift */,
+			);
+			name = Push;
+			sourceTree = "<group>";
+		};
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
+				230DFB2E1EA05F920051A811 /* Push */,
 				230DFB211EA05D360051A811 /* ThirdParty */,
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
@@ -264,9 +295,7 @@
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
 				23EAF6441E9DAEB100C6EBAB /* fxa-iosTests */,
 				23EDEFDF1E9EE72B00F530CF /* Shared */,
-				23EDEFEC1E9EE72B00F530CF /* SharedTests */,
 				23EDF0021E9EE73700F530CF /* Account */,
-				23EDF00F1E9EE73700F530CF /* AccountTests */,
 				23EAF62E1E9DAEB100C6EBAB /* Products */,
 				23EAF6621E9ECB7E00C6EBAB /* Frameworks */,
 			);
@@ -328,15 +357,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		23EDEFEC1E9EE72B00F530CF /* SharedTests */ = {
-			isa = PBXGroup;
-			children = (
-				23EDEFED1E9EE72B00F530CF /* SharedTests.swift */,
-				23EDEFEF1E9EE72B00F530CF /* Info.plist */,
-			);
-			path = SharedTests;
-			sourceTree = "<group>";
-		};
 		23EDF0021E9EE73700F530CF /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,15 +375,6 @@
 				23EDF0041E9EE73700F530CF /* Info.plist */,
 			);
 			path = Account;
-			sourceTree = "<group>";
-		};
-		23EDF00F1E9EE73700F530CF /* AccountTests */ = {
-			isa = PBXGroup;
-			children = (
-				23EDF0101E9EE73700F530CF /* AccountTests.swift */,
-				23EDF0121E9EE73700F530CF /* Info.plist */,
-			);
-			path = AccountTests;
 			sourceTree = "<group>";
 		};
 		23EDF0471E9EF42E00F530CF /* Extensions */ = {
@@ -486,6 +497,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				230DFB4F1EA06F250051A811 /* PBXTargetDependency */,
+				230DFB4D1EA06E860051A811 /* PBXTargetDependency */,
 			);
 			name = Account;
 			productName = Account;
@@ -656,6 +669,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
+				230DFB331EA05FA80051A811 /* PushClient.swift in Sources */,
+				230DFB341EA05FA80051A811 /* PushConfiguration.swift in Sources */,
+				230DFB351EA05FA80051A811 /* PushCrypto.swift in Sources */,
+				230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */,
 				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
@@ -689,7 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23EDEFEE1E9EE72B00F530CF /* SharedTests.swift in Sources */,
+				230DFB371EA05FF70051A811 /* FirefoxAccountConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,13 +731,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23EDF0111E9EE73700F530CF /* AccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		230DFB4D1EA06E860051A811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23EDEFDD1E9EE72B00F530CF /* Shared */;
+			targetProxy = 230DFB4C1EA06E860051A811 /* PBXContainerItemProxy */;
+		};
+		230DFB4F1EA06F250051A811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FxA;
+			targetProxy = 230DFB4E1EA06F250051A811 /* PBXContainerItemProxy */;
+		};
 		23EAF6431E9DAEB100C6EBAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 23EAF62C1E9DAEB100C6EBAB /* fxa-ios */;
