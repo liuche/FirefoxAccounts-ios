@@ -51,6 +51,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		230DFB271EA05D530051A811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 28F951FB19D0F9FA00DCE892;
+			remoteInfo = FxA;
+		};
+		230DFB291EA05D530051A811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 28F9520619D0F9FB00DCE892;
+			remoteInfo = FxATests;
+		};
 		23EAF6421E9DAEB100C6EBAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
@@ -118,6 +132,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		230DFB221EA05D520051A811 /* FxA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FxA.xcodeproj; path = FxA/FxA.xcodeproj; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -218,9 +233,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230DFB211EA05D360051A811 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				230DFB221EA05D520051A811 /* FxA.xcodeproj */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		230DFB231EA05D520051A811 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				230DFB281EA05D530051A811 /* FxA.framework */,
+				230DFB2A1EA05D530051A811 /* FxATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
+				230DFB211EA05D360051A811 /* ThirdParty */,
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
 				23EAF6581E9EA90D00C6EBAB /* Profile.swift */,
@@ -527,6 +560,12 @@
 			mainGroup = 23EAF6241E9DAEB100C6EBAB;
 			productRefGroup = 23EAF62E1E9DAEB100C6EBAB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 230DFB231EA05D520051A811 /* Products */;
+					ProjectRef = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				23EAF62C1E9DAEB100C6EBAB /* fxa-ios */,
@@ -538,6 +577,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		230DFB281EA05D530051A811 /* FxA.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FxA.framework;
+			remoteRef = 230DFB271EA05D530051A811 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		230DFB2A1EA05D530051A811 /* FxATests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FxATests.xctest;
+			remoteRef = 230DFB291EA05D530051A811 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		23EAF62B1E9DAEB100C6EBAB /* Resources */ = {
