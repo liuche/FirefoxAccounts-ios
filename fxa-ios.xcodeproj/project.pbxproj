@@ -328,18 +328,18 @@
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
-				230DFB2E1EA05F920051A811 /* Push */,
-				230DFB211EA05D360051A811 /* ThirdParty */,
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
-				23EAF6581E9EA90D00C6EBAB /* Profile.swift */,
-				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
+				23EDF0021E9EE73700F530CF /* Account */,
+				23EAF6621E9ECB7E00C6EBAB /* Frameworks */,
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
 				23EAF6441E9DAEB100C6EBAB /* fxa-iosTests */,
-				23EDEFDF1E9EE72B00F530CF /* Shared */,
-				23EDF0021E9EE73700F530CF /* Account */,
 				23EAF62E1E9DAEB100C6EBAB /* Products */,
-				23EAF6621E9ECB7E00C6EBAB /* Frameworks */,
+				230DFB2E1EA05F920051A811 /* Push */,
+				23EDEFDF1E9EE72B00F530CF /* Shared */,
+				230DFB211EA05D360051A811 /* ThirdParty */,
+				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
+				23EAF6581E9EA90D00C6EBAB /* Profile.swift */,
 			);
 			sourceTree = "<group>";
 		};
