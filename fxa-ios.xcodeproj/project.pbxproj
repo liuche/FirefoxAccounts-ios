@@ -28,6 +28,7 @@
 		230DFB701EA183D20051A811 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB6F1EA183D20051A811 /* DeviceInfo.swift */; };
 		230DFB721EA184070051A811 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB711EA184070051A811 /* Prefs.swift */; };
 		230DFB741EA185140051A811 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB731EA185140051A811 /* Reachability.swift */; };
+		230DFB8A1EA18E880051A811 /* Shared-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -185,6 +186,7 @@
 		230DFB6F1EA183D20051A811 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		230DFB711EA184070051A811 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		230DFB731EA185140051A811 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ThirdParty/Reachability.swift; sourceTree = "<group>"; };
+		230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shared-Bridging-Header.h"; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 		23EDEFDF1E9EE72B00F530CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */,
 				230DFB711EA184070051A811 /* Prefs.swift */,
 				230DFB6F1EA183D20051A811 /* DeviceInfo.swift */,
 				230DFB6D1EA183A20051A811 /* AppInfo.swift */,
@@ -447,6 +450,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230DFB8A1EA18E880051A811 /* Shared-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1051,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = allizom.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/Shared/Shared-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1072,6 +1077,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = allizom.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/Shared/Shared-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
