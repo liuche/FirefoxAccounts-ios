@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
-		230DFB331EA05FA80051A811 /* PushClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB2F1EA05FA80051A811 /* PushClient.swift */; };
-		230DFB341EA05FA80051A811 /* PushConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB301EA05FA80051A811 /* PushConfiguration.swift */; };
-		230DFB351EA05FA80051A811 /* PushCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB311EA05FA80051A811 /* PushCrypto.swift */; };
-		230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB321EA05FA80051A811 /* PushRegistration.swift */; };
 		230DFB371EA05FF70051A811 /* FirefoxAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */; };
 		230DFB381EA063280051A811 /* FxA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; };
 		230DFB551EA0709D0051A811 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB511EA0709D0051A811 /* Error.swift */; };
@@ -29,6 +25,10 @@
 		230DFB721EA184070051A811 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB711EA184070051A811 /* Prefs.swift */; };
 		230DFB741EA185140051A811 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB731EA185140051A811 /* Reachability.swift */; };
 		230DFB8A1EA18E880051A811 /* Shared-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */; };
+		230DFB9A1EA1A31C0051A811 /* PushClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB2F1EA05FA80051A811 /* PushClient.swift */; };
+		230DFB9B1EA1A31C0051A811 /* PushConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB301EA05FA80051A811 /* PushConfiguration.swift */; };
+		230DFB9C1EA1A31C0051A811 /* PushCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB311EA05FA80051A811 /* PushCrypto.swift */; };
+		230DFB9D1EA1A31C0051A811 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB321EA05FA80051A811 /* PushRegistration.swift */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -724,10 +724,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
-				230DFB331EA05FA80051A811 /* PushClient.swift in Sources */,
-				230DFB341EA05FA80051A811 /* PushConfiguration.swift in Sources */,
-				230DFB351EA05FA80051A811 /* PushCrypto.swift in Sources */,
-				230DFB361EA05FA80051A811 /* PushRegistration.swift in Sources */,
 				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
 				230DFB551EA0709D0051A811 /* Error.swift in Sources */,
@@ -784,9 +780,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EDF0311E9EE74500F530CF /* FxADeviceRegistration.swift in Sources */,
+				230DFB9A1EA1A31C0051A811 /* PushClient.swift in Sources */,
+				230DFB9B1EA1A31C0051A811 /* PushConfiguration.swift in Sources */,
 				23EDF0371E9EE74500F530CF /* TokenServerClient.swift in Sources */,
 				23EDF02E1E9EE74500F530CF /* FirefoxAccountConfiguration.swift in Sources */,
 				23EDF0301E9EE74500F530CF /* FxADevice.swift in Sources */,
+				230DFB9D1EA1A31C0051A811 /* PushRegistration.swift in Sources */,
+				230DFB9C1EA1A31C0051A811 /* PushCrypto.swift in Sources */,
 				23EDF0331E9EE74500F530CF /* FxAState.swift in Sources */,
 				23EDF02D1E9EE74500F530CF /* FirefoxAccount.swift in Sources */,
 				23EDF02F1E9EE74500F530CF /* FxAClient10.swift in Sources */,
