@@ -33,6 +33,10 @@
 		230DFBAD1EA5607F0051A811 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB511EA0709D0051A811 /* Error.swift */; };
 		230DFBAE1EA560830051A811 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB541EA0709D0051A811 /* Result.swift */; };
 		230DFBB21EA56C060051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
+		230DFBB61EA56D640051A811 /* DeferredUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB51EA56D640051A811 /* DeferredUtils.swift */; };
+		230DFBB81EA56D8C0051A811 /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB71EA56D8C0051A811 /* AlamofireExtensions.swift */; };
+		230DFBBB1EA5709F0051A811 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB91EA5709F0051A811 /* AppConstants.swift */; };
+		230DFBBC1EA5709F0051A811 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBBA1EA5709F0051A811 /* NotificationConstants.swift */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -195,6 +199,10 @@
 		230DFBA31EA1A5110051A811 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		230DFBA41EA1A5110051A811 /* BoxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxType.swift; sourceTree = "<group>"; };
 		230DFBA61EA1A5110051A811 /* MutableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableBox.swift; sourceTree = "<group>"; };
+		230DFBB51EA56D640051A811 /* DeferredUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeferredUtils.swift; sourceTree = "<group>"; };
+		230DFBB71EA56D8C0051A811 /* AlamofireExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireExtensions.swift; path = Extensions/AlamofireExtensions.swift; sourceTree = "<group>"; };
+		230DFBB91EA5709F0051A811 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		230DFBBA1EA5709F0051A811 /* NotificationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +419,9 @@
 		23EDEFDF1E9EE72B00F530CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				230DFBB91EA5709F0051A811 /* AppConstants.swift */,
+				230DFBBA1EA5709F0051A811 /* NotificationConstants.swift */,
+				230DFBB51EA56D640051A811 /* DeferredUtils.swift */,
 				230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */,
 				230DFB711EA184070051A811 /* Prefs.swift */,
 				230DFB6F1EA183D20051A811 /* DeviceInfo.swift */,
@@ -449,6 +460,7 @@
 		23EDF0471E9EF42E00F530CF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				230DFBB71EA56D8C0051A811 /* AlamofireExtensions.swift */,
 				230DFB9E1EA1A38F0051A811 /* DataExtensions.swift */,
 				230DFB691EA1830C0051A811 /* KeychainWrapperExtensions.swift */,
 				230DFB5F1EA16D400051A811 /* HashExtensions.swift */,
@@ -763,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230DFBB81EA56D8C0051A811 /* AlamofireExtensions.swift in Sources */,
 				230DFB721EA184070051A811 /* Prefs.swift in Sources */,
 				230DFB6A1EA1830C0051A811 /* KeychainWrapperExtensions.swift in Sources */,
 				230DFB641EA16D400051A811 /* NSCoderExtensions.swift in Sources */,
@@ -771,6 +784,7 @@
 				23EDF03E1E9EE76800F530CF /* Logger.swift in Sources */,
 				230DFBA81EA1A5110051A811 /* Box.swift in Sources */,
 				230DFB631EA16D400051A811 /* HexExtensions.swift in Sources */,
+				230DFBB61EA56D640051A811 /* DeferredUtils.swift in Sources */,
 				230DFB671EA16D4A0051A811 /* KeychainCache.swift in Sources */,
 				23EDF0711E9EFE6500F530CF /* NSFileManagerExtensions.swift in Sources */,
 				230DFB701EA183D20051A811 /* DeviceInfo.swift in Sources */,
@@ -779,6 +793,7 @@
 				230DFB9F1EA1A38F0051A811 /* DataExtensions.swift in Sources */,
 				230DFBAE1EA560830051A811 /* Result.swift in Sources */,
 				230DFBAB1EA1A5110051A811 /* MutableBox.swift in Sources */,
+				230DFBBC1EA5709F0051A811 /* NotificationConstants.swift in Sources */,
 				230DFB681EA16D4A0051A811 /* UserAgent.swift in Sources */,
 				230DFB621EA16D400051A811 /* HashExtensions.swift in Sources */,
 				23EDF06E1E9EFE1A00F530CF /* NSStringExtensions.swift in Sources */,
@@ -787,6 +802,7 @@
 				230DFB6C1EA183600051A811 /* Bytes.swift in Sources */,
 				23EDF0411E9EE76800F530CF /* TimeConstants.swift in Sources */,
 				230DFB741EA185140051A811 /* Reachability.swift in Sources */,
+				230DFBBB1EA5709F0051A811 /* AppConstants.swift in Sources */,
 				230DFBAD1EA5607F0051A811 /* Error.swift in Sources */,
 				23EDF0751E9F006200F530CF /* ArrayExtensions.swift in Sources */,
 			);
