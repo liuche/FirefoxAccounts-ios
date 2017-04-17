@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
 		230DFB371EA05FF70051A811 /* FirefoxAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */; };
 		230DFB381EA063280051A811 /* FxA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; };
-		230DFB551EA0709D0051A811 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB511EA0709D0051A811 /* Error.swift */; };
-		230DFB581EA0709D0051A811 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB541EA0709D0051A811 /* Result.swift */; };
 		230DFB5D1EA16C0E0051A811 /* JSONExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB5C1EA16C0E0051A811 /* JSONExtensions.swift */; };
 		230DFB621EA16D400051A811 /* HashExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB5F1EA16D400051A811 /* HashExtensions.swift */; };
 		230DFB631EA16D400051A811 /* HexExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB601EA16D400051A811 /* HexExtensions.swift */; };
@@ -29,6 +26,13 @@
 		230DFB9B1EA1A31C0051A811 /* PushConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB301EA05FA80051A811 /* PushConfiguration.swift */; };
 		230DFB9C1EA1A31C0051A811 /* PushCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB311EA05FA80051A811 /* PushCrypto.swift */; };
 		230DFB9D1EA1A31C0051A811 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB321EA05FA80051A811 /* PushRegistration.swift */; };
+		230DFB9F1EA1A38F0051A811 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB9E1EA1A38F0051A811 /* DataExtensions.swift */; };
+		230DFBA81EA1A5110051A811 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBA31EA1A5110051A811 /* Box.swift */; };
+		230DFBA91EA1A5110051A811 /* BoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBA41EA1A5110051A811 /* BoxType.swift */; };
+		230DFBAB1EA1A5110051A811 /* MutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBA61EA1A5110051A811 /* MutableBox.swift */; };
+		230DFBAD1EA5607F0051A811 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB511EA0709D0051A811 /* Error.swift */; };
+		230DFBAE1EA560830051A811 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFB541EA0709D0051A811 /* Result.swift */; };
+		230DFBB21EA56C060051A811 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB2B1EA05E1B0051A811 /* Deferred.framework */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* ViewController.swift */; };
 		23EAF6361E9DAEB100C6EBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6341E9DAEB100C6EBAB /* Main.storyboard */; };
@@ -187,6 +191,10 @@
 		230DFB711EA184070051A811 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		230DFB731EA185140051A811 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ThirdParty/Reachability.swift; sourceTree = "<group>"; };
 		230DFB891EA18E880051A811 /* Shared-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shared-Bridging-Header.h"; sourceTree = "<group>"; };
+		230DFB9E1EA1A38F0051A811 /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataExtensions.swift; path = Extensions/DataExtensions.swift; sourceTree = "<group>"; };
+		230DFBA31EA1A5110051A811 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		230DFBA41EA1A5110051A811 /* BoxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxType.swift; sourceTree = "<group>"; };
+		230DFBA61EA1A5110051A811 /* MutableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableBox.swift; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6321E9DAEB100C6EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -270,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230DFB381EA063280051A811 /* FxA.framework in Frameworks */,
-				230DFB2D1EA05E450051A811 /* Deferred.framework in Frameworks */,
+				230DFBB21EA56C060051A811 /* Deferred.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 		230DFB211EA05D360051A811 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				230DFBA21EA1A5110051A811 /* Box */,
 				230DFB731EA185140051A811 /* Reachability.swift */,
 				230DFB501EA0709D0051A811 /* Result */,
 				230DFB221EA05D520051A811 /* FxA.xcodeproj */,
@@ -323,6 +332,17 @@
 			);
 			name = Result;
 			path = ThirdParty/Result;
+			sourceTree = "<group>";
+		};
+		230DFBA21EA1A5110051A811 /* Box */ = {
+			isa = PBXGroup;
+			children = (
+				230DFBA31EA1A5110051A811 /* Box.swift */,
+				230DFBA41EA1A5110051A811 /* BoxType.swift */,
+				230DFBA61EA1A5110051A811 /* MutableBox.swift */,
+			);
+			name = Box;
+			path = ThirdParty/Box;
 			sourceTree = "<group>";
 		};
 		23EAF6241E9DAEB100C6EBAB = {
@@ -429,6 +449,7 @@
 		23EDF0471E9EF42E00F530CF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				230DFB9E1EA1A38F0051A811 /* DataExtensions.swift */,
 				230DFB691EA1830C0051A811 /* KeychainWrapperExtensions.swift */,
 				230DFB5F1EA16D400051A811 /* HashExtensions.swift */,
 				230DFB601EA16D400051A811 /* HexExtensions.swift */,
@@ -726,9 +747,7 @@
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
 				23EAF6591E9EA90D00C6EBAB /* Profile.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* ViewController.swift in Sources */,
-				230DFB551EA0709D0051A811 /* Error.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
-				230DFB581EA0709D0051A811 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,14 +766,19 @@
 				230DFB721EA184070051A811 /* Prefs.swift in Sources */,
 				230DFB6A1EA1830C0051A811 /* KeychainWrapperExtensions.swift in Sources */,
 				230DFB641EA16D400051A811 /* NSCoderExtensions.swift in Sources */,
+				230DFBA91EA1A5110051A811 /* BoxType.swift in Sources */,
 				23EDF06F1E9EFE1A00F530CF /* NSURLExtensions.swift in Sources */,
 				23EDF03E1E9EE76800F530CF /* Logger.swift in Sources */,
+				230DFBA81EA1A5110051A811 /* Box.swift in Sources */,
 				230DFB631EA16D400051A811 /* HexExtensions.swift in Sources */,
 				230DFB671EA16D4A0051A811 /* KeychainCache.swift in Sources */,
 				23EDF0711E9EFE6500F530CF /* NSFileManagerExtensions.swift in Sources */,
 				230DFB701EA183D20051A811 /* DeviceInfo.swift in Sources */,
 				23EDF0731E9EFF3900F530CF /* StringExtensions.swift in Sources */,
 				230DFB5D1EA16C0E0051A811 /* JSONExtensions.swift in Sources */,
+				230DFB9F1EA1A38F0051A811 /* DataExtensions.swift in Sources */,
+				230DFBAE1EA560830051A811 /* Result.swift in Sources */,
+				230DFBAB1EA1A5110051A811 /* MutableBox.swift in Sources */,
 				230DFB681EA16D4A0051A811 /* UserAgent.swift in Sources */,
 				230DFB621EA16D400051A811 /* HashExtensions.swift in Sources */,
 				23EDF06E1E9EFE1A00F530CF /* NSStringExtensions.swift in Sources */,
@@ -763,6 +787,7 @@
 				230DFB6C1EA183600051A811 /* Bytes.swift in Sources */,
 				23EDF0411E9EE76800F530CF /* TimeConstants.swift in Sources */,
 				230DFB741EA185140051A811 /* Reachability.swift in Sources */,
+				230DFBAD1EA5607F0051A811 /* Error.swift in Sources */,
 				23EDF0751E9F006200F530CF /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
