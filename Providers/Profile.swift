@@ -2,17 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-//import Alamofire
-//import Foundation
-//import Account
+import Alamofire
+import Foundation
+import Account
 //import ReadingList
-//import Shared
+import Shared
 //import Storage
 //import Sync
-//import XCGLogger
-//import SwiftKeychainWrapper
-//import Deferred
-//import SwiftyJSON
+import XCGLogger
+import SwiftKeychainWrapper
+import Deferred
+import SwiftyJSON
 
 private let log = Logger.syncLogger
 
@@ -21,6 +21,7 @@ public let NotificationProfileDidFinishSyncing = Notification.Name("Notification
 
 public let ProfileRemoteTabsSyncDelay: TimeInterval = 0.1
 
+/*
 public protocol SyncManager {
     var isSyncing: Bool { get }
     var lastSyncFinishTime: Timestamp? { get set }
@@ -45,7 +46,7 @@ public protocol SyncManager {
     @discardableResult func onRemovedAccount(_ account: FirefoxAccount?) -> Success
     @discardableResult func onAddedAccount() -> Success
 }
-
+ 
 typealias EngineIdentifier = String
 typealias SyncFunction = (SyncDelegate, Prefs, Ready) -> SyncResult
 typealias EngineStatus = (EngineIdentifier, SyncStatus)
@@ -86,6 +87,7 @@ class CommandStoringSyncDelegate: SyncDelegate {
         let _ = self.profile.queue.addToQueue(item)
     }
 }
+*/
 
 /**
  * This exists because the Sync code is extension-safe, and thus doesn't get
@@ -95,6 +97,7 @@ class CommandStoringSyncDelegate: SyncDelegate {
  * getting access to data sources during a sync.
  */
 
+/*
 let TabSendURLKey = "TabSendURL"
 let TabSendTitleKey = "TabSendTitle"
 let TabSendCategory = "TabSendCategory"
@@ -134,14 +137,16 @@ class BrowserProfileSyncDelegate: SyncDelegate {
         }
     }
 }
+*/
 
 /**
  * A Profile manages access to the user's data.
  */
 protocol Profile: class {
-    var bookmarks: BookmarksModelFactorySource & KeywordSearchSource & ShareToDestination & SyncableBookmarks & LocalItemSource & MirrorItemSource { get }
+//    var bookmarks: BookmarksModelFactorySource & KeywordSearchSource & ShareToDestination & SyncableBookmarks & LocalItemSource & MirrorItemSource { get }
     // var favicons: Favicons { get }
     var prefs: Prefs { get }
+/*
     var queue: TabQueue { get }
     var searchEngines: SearchEngines { get }
     var files: FileAccessor { get }
@@ -153,7 +158,7 @@ protocol Profile: class {
     var logins: BrowserLogins & SyncableLogins & ResettableSyncStorage { get }
     var certStore: CertStore { get }
     var recentlyClosedTabs: ClosedTabsStore { get }
-
+*/
     var isShutdown: Bool { get }
     
     func shutdown()
@@ -177,6 +182,7 @@ protocol Profile: class {
     func setAccount(_ account: FirefoxAccount)
     func flushAccount()
 
+/*
     func getClients() -> Deferred<Maybe<[RemoteClient]>>
     func getClientsAndTabs() -> Deferred<Maybe<[ClientAndTabs]>>
     func getCachedClientsAndTabs() -> Deferred<Maybe<[ClientAndTabs]>>
@@ -186,7 +192,9 @@ protocol Profile: class {
     func sendItems(_ items: [ShareItem], toClients clients: [RemoteClient])
 
     var syncManager: SyncManager { get }
+ 
     var isChinaEdition: Bool { get }
+*/
 }
 
 fileprivate let PrefKeyClientID = "PrefKeyClientID"
@@ -208,12 +216,12 @@ open class BrowserProfile: Profile {
     fileprivate let keychain: KeychainWrapper
     var isShutdown = false
 
-    internal let files: FileAccessor
+//    internal let files: FileAccessor
 
     weak fileprivate var app: UIApplication?
 
-    let db: BrowserDB
-    let loginsDB: BrowserDB
+//    let db: BrowserDB
+//    let loginsDB: BrowserDB
 
     private static var loginsKey: String? {
         let key = "sqlcipher.key.logins.db"
@@ -240,10 +248,11 @@ open class BrowserProfile: Profile {
     init(localName: String, app: UIApplication?, clear: Bool = false) {
         log.debug("Initing profile \(localName) on thread \(Thread.current).")
         self.name = localName
-        self.files = ProfileFileAccessor(localName: localName)
+//        self.files = ProfileFileAccessor(localName: localName)
         self.app = app
         self.keychain = KeychainWrapper.sharedAppContainerKeychain
 
+/*
         if clear {
             do {
                 try FileManager.default.removeItem(atPath: self.files.rootPath as String)
@@ -297,6 +306,7 @@ open class BrowserProfile: Profile {
             // just the behaviour when there is no homepage.
             prefs.removeObjectForKey(PrefsKeys.KeyDefaultHomePageURL)
         }
+ */
     }
 
     // Extensions don't have a UIApplication.
@@ -307,21 +317,24 @@ open class BrowserProfile: Profile {
     func reopen() {
         log.debug("Reopening profile.")
         isShutdown = false
-        
+/*
         db.reopenIfClosed()
         loginsDB.reopenIfClosed()
+*/
     }
 
     func shutdown() {
         log.debug("Shutting down profile.")
         isShutdown = true
-
+/*
         db.forceClose()
         loginsDB.forceClose()
+*/
     }
 
     @objc
     func onLocationChange(notification: NSNotification) {
+/*
         if let v = notification.userInfo!["visitType"] as? Int,
            let visitType = VisitType(rawValue: v),
            let url = notification.userInfo!["url"] as? URL, !isIgnoredURL(url),
@@ -338,10 +351,13 @@ open class BrowserProfile: Profile {
         } else {
             log.debug("Ignoring navigation.")
         }
+ */
     }
 
+/*
     @objc
     func onPageMetadataFetched(notification: NSNotification) {
+
         let isPrivate = notification.userInfo?["isPrivate"] as? Bool ?? true
         guard !isPrivate else {
             log.debug("Private mode - Ignoring page metadata.")
@@ -357,6 +373,7 @@ open class BrowserProfile: Profile {
 
         let defaultMetadataTTL: UInt64 = 3 * 24 * 60 * 60 * 1000 // 3 days for the metadata to live
         self.metadata.storeMetadata(pageMetadata, forPageURL: pageURL, expireAt: defaultMetadataTTL + Date.now())
+ 
     }
 
     // These selectors run on which ever thread sent the notifications (not the main thread)
@@ -370,26 +387,28 @@ open class BrowserProfile: Profile {
         // Immediately invalidate the top sites cache
         history.refreshTopSitesCache()
     }
-
+*/
     deinit {
         log.debug("Deiniting profile \(self.localName).")
+/*
         self.syncManager.endTimedSyncs()
         NotificationCenter.default.removeObserver(self, name: NotificationOnLocationChange, object: nil)
         NotificationCenter.default.removeObserver(self, name: NotificationOnPageMetadataFetched, object: nil)
         NotificationCenter.default.removeObserver(self, name: NotificationProfileDidFinishSyncing, object: nil)
         NotificationCenter.default.removeObserver(self, name: NotificationPrivateDataClearedHistory, object: nil)
+*/
     }
 
     func localName() -> String {
         return name
     }
-
+/*
     lazy var queue: TabQueue = {
         withExtendedLifetime(self.history) {
             return SQLiteQueue(db: self.db)
         }
     }()
-
+*/
     /**
      * Favicons, history, and bookmarks are all stored in one intermeshed
      * collection of tables.
@@ -397,6 +416,7 @@ open class BrowserProfile: Profile {
      * Any other class that needs to access any one of these should ensure
      * that this is initialized first.
      */
+/*
     fileprivate lazy var places: BrowserHistory & Favicons & SyncableHistory & ResettableSyncStorage & HistoryRecommendations  = {
         return SQLiteHistory(db: self.db, prefs: self.prefs)
     }()
@@ -433,7 +453,7 @@ open class BrowserProfile: Profile {
     lazy var searchEngines: SearchEngines = {
         return SearchEngines(prefs: self.prefs, files: self.files)
     }()
-
+*/
     func makePrefs() -> Prefs {
         return NSUserDefaultsPrefs(prefix: self.localName())
     }
@@ -442,6 +462,7 @@ open class BrowserProfile: Profile {
         return self.makePrefs()
     }()
 
+/*
     lazy var readingList: ReadingListService? = {
         return ReadingListService(profileStoragePath: self.files.rootPath as String)
     }()
@@ -502,14 +523,16 @@ open class BrowserProfile: Profile {
     lazy var isChinaEdition: Bool = {
         return Locale.current.identifier == "zh_CN"
     }()
-
+*/
     var accountConfiguration: FirefoxAccountConfiguration {
+/*
         if prefs.boolForKey("useChinaSyncService") ?? isChinaEdition {
             return ChinaEditionFirefoxAccountConfiguration()
         }
         if prefs.boolForKey("useStageSyncService") ?? false {
             return StageFirefoxAccountConfiguration()
         }
+ */
         return ProductionFirefoxAccountConfiguration()
     }
 
@@ -538,7 +561,7 @@ open class BrowserProfile: Profile {
     }
 
     func removeExistingAuthenticationInfo() {
-        self.keychain.setAuthenticationInfo(nil)
+//        self.keychain.setAuthenticationInfo(nil)
     }
 
     func removeAccount() {
@@ -551,7 +574,7 @@ open class BrowserProfile: Profile {
 
         // Trigger cleanup. Pass in the account in case we want to try to remove
         // client-specific data from the server.
-        self.syncManager.onRemovedAccount(old)
+//        self.syncManager.onRemovedAccount(old)
 
         // Deregister for remote notifications.
         app?.unregisterForRemoteNotifications()
@@ -566,7 +589,7 @@ open class BrowserProfile: Profile {
         let userInfo = [NotificationUserInfoKeyHasSyncableAccount: hasSyncableAccount()]
         NotificationCenter.default.post(name: NotificationFirefoxAccountChanged, object: nil, userInfo: userInfo)
 
-        self.syncManager.onAddedAccount()
+//        self.syncManager.onAddedAccount()
     }
 
     func flushAccount() {
@@ -575,7 +598,7 @@ open class BrowserProfile: Profile {
             self.keychain.set(account.dictionary() as NSCoding, forKey: name + ".account")
         }
     }
-
+/*
     // Extends NSObject so we can use timers.
     class BrowserSyncManager: NSObject, SyncManager {
         // We shouldn't live beyond our containing BrowserProfile, either in the main app or in
@@ -1251,4 +1274,5 @@ open class BrowserProfile: Profile {
             }
         }
     }
+*/
 }

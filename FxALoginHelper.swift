@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Account
+import Shared
 import Deferred
 import Foundation
 import SwiftyJSON
@@ -85,7 +87,7 @@ class FxALoginHelper {
         // the notification in the Settings app.
 
         self.account = account
-        requestUserNotifications(application)
+//        requestUserNotifications(application)
     }
 
     // This is called when the user logs into a new FxA account.
@@ -106,9 +108,10 @@ class FxALoginHelper {
         }
         accountVerified = data["verified"].bool ?? false
         self.account = account
-        requestUserNotifications(application)
+//        requestUserNotifications(application)
     }
 
+/*
     fileprivate func requestUserNotifications(_ application: UIApplication) {
         let viewAction = UIMutableUserNotificationAction()
         viewAction.identifier = SentTabAction.view.rawValue
@@ -141,6 +144,7 @@ class FxALoginHelper {
 
         application.registerUserNotificationSettings(settings)
     }
+*/
 
     // This is necessarily called from the AppDelegate.
     // Once we have permission from the user to display notifications, we should 
