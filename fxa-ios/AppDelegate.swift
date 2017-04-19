@@ -8,11 +8,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    weak var profile: Profile?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let fxaLoginHelper = FxALoginHelper.sharedInstance
+        let profile = getProfile(application)
+        fxaLoginHelper.application(application, didLoadProfile: profile)
         return true
     }
 
@@ -38,6 +40,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    /**
+     * We maintain a weak reference to the profile so that we can pause timed
+     * syncs when we're backgrounded.
+     *
+     * The long-lasting ref to the profile lives in BrowserViewController,
+     * which we set in application:willFinishLaunchingWithOptions:.
+     *
+     * If that ever disappears, we won't be able to grab the profile to stop
+     * syncing... but in that case the profile's deinit will take care of things.
+     */
+    func getProfile(_ application: UIApplication) -> Profile {
+        if let profile = self.profile {
+            return profile
+        }
+        let p = BrowserProfile(localName: "profile", app: application)
+        self.profile = p
+        return p
+    }
 }
 
