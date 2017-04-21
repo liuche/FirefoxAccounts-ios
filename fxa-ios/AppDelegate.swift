@@ -60,3 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+struct FxALaunchParams {
+    var view: String?
+    var email: String?
+    var access_code: String?
+}
+

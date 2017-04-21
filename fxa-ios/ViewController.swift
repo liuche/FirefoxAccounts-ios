@@ -3,8 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
+    var fxaOptions = FxALaunchParams()
+    var url: URL!
+    // The web view that displays content.
+    var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
