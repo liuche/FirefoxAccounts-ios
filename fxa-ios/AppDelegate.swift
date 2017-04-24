@@ -11,7 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     weak var profile: Profile?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        window?.rootViewController = FxAViewController()
+        window?.makeKeyAndVisible()
+
         let fxaLoginHelper = FxALoginHelper.sharedInstance
         let profile = getProfile(application)
         fxaLoginHelper.application(application, didLoadProfile: profile)
