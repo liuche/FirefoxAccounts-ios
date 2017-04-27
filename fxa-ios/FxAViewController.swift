@@ -29,11 +29,13 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let config = WKWebViewConfiguration()
-        self.webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-                                 configuration: config)
+
+        // Hard-coded dev account
+        self.url = ProductionFirefoxAccountConfiguration().signInURL
+
+        view.backgroundColor = UIColor.white
+        self.webView = makeWebView()
         webView.navigationDelegate = self
-        self.url = LatestDevFirefoxAccountConfiguration().signInURL
 
         view.addSubview(webView)
 
@@ -46,7 +48,30 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         
         NSLayoutConstraint.activate(constraints, translatesAutoresizingMaskIntoConstraints: false)
 
-        self.webView.load(URLRequest(url: url))
+        webView.load(URLRequest(url: url))
+    }
+
+    func makeWebView() -> WKWebView {
+        let source = getJS()
+        let userScript = WKUserScript(
+            source: source,
+            injectionTime: WKUserScriptInjectionTime.atDocumentEnd,
+            forMainFrameOnly: true
+        )
+
+        // Handle messages from the content server (via our user script).
+        let contentController = WKUserContentController()
+        contentController.addUserScript(userScript)
+        contentController.add(LeakAvoider(delegate:self), name: "accountsCommandHandler")
+
+        let config = WKWebViewConfiguration()
+        config.userContentController = contentController
+
+        let webView = WKWebView(
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            configuration: config
+        )
+        return webView
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +81,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     
     // Handle a message coming from the content server.
     func handleRemoteCommand(_ rawValue: String, data: JSON) {
+        print(rawValue)
         if let command = RemoteCommand(rawValue: rawValue) {
             // Add in states later.
         }
@@ -72,13 +98,18 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             print("Ignoring message - \(origin) does not match expected origin \(url.origin)")
             return
         }
-        
+
         if message.name == "accountsCommandHandler" {
             let body = JSON(message.body)
             let detail = body["detail"]
             handleRemoteCommand(detail["command"].stringValue, data: detail["data"])
         }
     }
+}
+
+fileprivate func getJS() -> String {
+    let fileRoot = Bundle.main.path(forResource: "FxASignIn", ofType: "js")
+    return (try! NSString(contentsOfFile: fileRoot!, encoding: String.Encoding.utf8.rawValue)) as String
 }
 
 extension FxAViewController: FxAPushLoginDelegate {
