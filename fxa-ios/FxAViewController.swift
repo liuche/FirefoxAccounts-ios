@@ -31,7 +31,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         super.viewDidLoad()
 
         // Hard-coded dev account
-        self.url = ProductionFirefoxAccountConfiguration().signInURL
+        self.url = LatestDevFirefoxAccountConfiguration().signInURL
 
         view.backgroundColor = UIColor.white
         self.webView = makeWebView()
