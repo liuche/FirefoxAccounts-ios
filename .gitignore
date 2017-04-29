@@ -1,3 +1,3 @@
 Carthage/
-xcuserdata/
+*.xcuserdatad/
 *.xcscmblueprint
