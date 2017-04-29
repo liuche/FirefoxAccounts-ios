@@ -83,10 +83,50 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     func handleRemoteCommand(_ rawValue: String, data: JSON) {
         print(rawValue)
         if let command = RemoteCommand(rawValue: rawValue) {
-            // Add in states later.
+            switch command {
+            case .loaded:
+                print("loaded")
+            case .login:
+                print("login")
+                onLogin(data)
+            case .canLinkAccount:
+                onCanLinkAccount(data)
+            case .sessionStatus:
+                print("sessionStatus")
+            case .signOut:
+                print("signout")
+            }
         }
     }
-    
+
+    // Send a message to the content server.
+    func injectData(_ type: String, content: [String: Any]) {
+        let data = [
+            "type": type,
+            "content": content,
+            ] as [String : Any]
+        let json = JSON(data).stringValue() ?? ""
+        let script = "window.postMessage(\(json), '\(self.url.absoluteString)');"
+        webView.evaluateJavaScript(script, completionHandler: nil)
+    }
+
+    fileprivate func onCanLinkAccount(_ data: JSON) {
+        //    // We need to confirm a relink - see shouldAllowRelink for more
+        //    let ok = shouldAllowRelink(accountData.email);
+        let ok = true
+        injectData("message", content: ["status": "can_link_account", "data": ["ok": ok]])
+    }
+
+    // The user has signed in to a Firefox Account.  We're done!
+    fileprivate func onLogin(_ data: JSON) {
+        injectData("message", content: ["status": "login"])
+
+        let app = UIApplication.shared
+        let helper = FxALoginHelper.sharedInstance
+        helper.delegate = self
+        helper.application(app, didReceiveAccountJSON: data)
+    }
+
     // Dispatch webkit messages originating from our child webview.
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         // Make sure we're communicating with a trusted page. That is, ensure the origin of the
@@ -118,7 +158,7 @@ extension FxAViewController: FxAPushLoginDelegate {
             self.delegate?.contentViewControllerDidSignIn(self, withFlags: flags)
         }
     }
-    
+
     func accountLoginDidFail() {
         DispatchQueue.main.async {
             self.delegate?.contentViewControllerDidCancel(self)
