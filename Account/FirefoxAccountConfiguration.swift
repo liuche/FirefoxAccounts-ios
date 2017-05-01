@@ -62,10 +62,9 @@ public struct LatestDevFirefoxAccountConfiguration: FirefoxAccountConfiguration 
     public let oauthEndpointURL = URL(string: "https://oauth-latest.dev.lcip.org")!
     public let profileEndpointURL = URL(string: "https://latest.dev.lcip.org/profile")!
 
-    // Removed params because of FxA bug: https://github.com/mozilla/fxa-content-server/issues/5016
-    public let signInURL = URL(string: "https://latest.dev.lcip.org/signin?service=sync")!
-    public let settingsURL = URL(string: "https://latest.dev.lcip.org/settings")!
-    public let forceAuthURL = URL(string: "https://latest.dev.lcip.org/force_auth?service=sync")!
+    public let signInURL = URL(string: "https://latest.dev.lcip.org/signin?service=sync&context=fx_ios_v1")!
+    public let settingsURL = URL(string: "https://latest.dev.lcip.org/settings?context=fx_ios_v1")!
+    public let forceAuthURL = URL(string: "https://latest.dev.lcip.org/force_auth?service=sync&context=fx_ios_v1")!
 
     public let sync15Configuration: Sync15Configuration = StageSync15Configuration()
 
