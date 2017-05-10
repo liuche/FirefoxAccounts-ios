@@ -11,12 +11,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     weak var profile: Profile?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.rootViewController = FxAViewController()
-        window?.makeKeyAndVisible()
 
         let fxaLoginHelper = FxALoginHelper.sharedInstance
         let profile = getProfile(application)
+
+        window = UIWindow()
+        window?.rootViewController = FxAViewController(profile: profile)
+        window?.makeKeyAndVisible()
+
         fxaLoginHelper.application(application, didLoadProfile: profile)
         return true
     }

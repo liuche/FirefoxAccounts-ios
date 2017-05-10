@@ -14,7 +14,8 @@ protocol FxAContentViewControllerDelegate: class {
 
 class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     var fxaOptions = FxALaunchParams()
-    var url: URL!
+    let profile: Profile
+    let url: URL!
     // The web view that displays content.
     var webView: WKWebView!
     weak var delegate: FxAContentViewControllerDelegate?
@@ -27,11 +28,18 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         case signOut = "sign_out"
     }
 
+    init(profile: Profile) {
+        self.profile = profile
+        self.url = self.profile.accountConfiguration.signInURL
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Hard-coded dev account
-        self.url = StageFirefoxAccountConfiguration().signInURL
 
         view.backgroundColor = UIColor.white
         self.webView = makeWebView()
@@ -48,7 +56,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         
         NSLayoutConstraint.activate(constraints, translatesAutoresizingMaskIntoConstraints: false)
 
-        webView.load(URLRequest(url: url))
+        webView.load(URLRequest(url: profile.accountConfiguration.signInURL))
     }
 
     func makeWebView() -> WKWebView {
@@ -155,6 +163,7 @@ fileprivate func getJS() -> String {
 extension FxAViewController: FxAPushLoginDelegate {
     func accountLoginDidSucceed(withFlags flags: FxALoginFlags) {
         DispatchQueue.main.async {
+            // TODO: Make sure this delegate does something
             self.delegate?.contentViewControllerDidSignIn(self, withFlags: flags)
         }
     }
