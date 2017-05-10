@@ -533,7 +533,7 @@ open class BrowserProfile: Profile {
             return StageFirefoxAccountConfiguration()
         }
  */
-        return ProductionFirefoxAccountConfiguration()
+        return StageFirefoxAccountConfiguration()
     }
 
     fileprivate lazy var account: FirefoxAccount? = {

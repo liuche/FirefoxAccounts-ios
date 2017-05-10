@@ -37,7 +37,7 @@ class FxALoginHelper {
 
     weak var delegate: FxAPushLoginDelegate?
 
-    fileprivate weak var profile: Profile?
+    fileprivate var profile: Profile?
 
     fileprivate var account: FirefoxAccount!
 
@@ -49,7 +49,6 @@ class FxALoginHelper {
     // to changing of user settings and push notifications.
     func application(_ application: UIApplication, didLoadProfile profile: Profile) {
         self.profile = profile
-
         guard let account = profile.getAccount() else {
             // There's no account, no further action.
             return loginDidFail()
@@ -108,43 +107,9 @@ class FxALoginHelper {
         }
         accountVerified = data["verified"].bool ?? false
         self.account = account
-//        requestUserNotifications(application)
+
+        readyForSyncing()
     }
-
-/*
-    fileprivate func requestUserNotifications(_ application: UIApplication) {
-        let viewAction = UIMutableUserNotificationAction()
-        viewAction.identifier = SentTabAction.view.rawValue
-        viewAction.title = Strings.SentTabViewActionTitle
-        viewAction.activationMode = .foreground
-        viewAction.isDestructive = false
-        viewAction.isAuthenticationRequired = false
-
-        let bookmarkAction = UIMutableUserNotificationAction()
-        bookmarkAction.identifier = SentTabAction.bookmark.rawValue
-        bookmarkAction.title = Strings.SentTabBookmarkActionTitle
-        bookmarkAction.activationMode = .foreground
-        bookmarkAction.isDestructive = false
-        bookmarkAction.isAuthenticationRequired = false
-
-        let readingListAction = UIMutableUserNotificationAction()
-        readingListAction.identifier = SentTabAction.readingList.rawValue
-        readingListAction.title = Strings.SentTabAddToReadingListActionTitle
-        readingListAction.activationMode = .foreground
-        readingListAction.isDestructive = false
-        readingListAction.isAuthenticationRequired = false
-
-        let sentTabsCategory = UIMutableUserNotificationCategory()
-        sentTabsCategory.identifier = TabSendCategory
-        sentTabsCategory.setActions([readingListAction, bookmarkAction, viewAction], for: .default)
-
-        sentTabsCategory.setActions([bookmarkAction, viewAction], for: .minimal)
-
-        let settings = UIUserNotificationSettings(types: .alert, categories: [sentTabsCategory])
-
-        application.registerUserNotificationSettings(settings)
-    }
-*/
 
     // This is necessarily called from the AppDelegate.
     // Once we have permission from the user to display notifications, we should 
