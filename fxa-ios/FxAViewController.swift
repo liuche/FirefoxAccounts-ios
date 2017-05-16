@@ -28,7 +28,10 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         case signOut = "sign_out"
     }
 
-    init(profile: Profile) {
+    init() {
+        let fxaLoginHelper = FxALoginHelper.sharedInstance
+        let profile = BrowserProfile(localName: "profile")
+        fxaLoginHelper.application(didLoadProfile: profile)
         self.profile = profile
         self.url = self.profile.accountConfiguration.signInURL
         super.init(nibName: nil, bundle: nil)
@@ -163,8 +166,7 @@ fileprivate func getJS() -> String {
 extension FxAViewController: FxAPushLoginDelegate {
     func accountLoginDidSucceed(withFlags flags: FxALoginFlags) {
         DispatchQueue.main.async {
-            // TODO: Make sure this delegate does something
-            self.delegate?.contentViewControllerDidSignIn(self, withFlags: flags)
+            self.dismiss(animated: true, completion: nil)
         }
     }
 
@@ -173,6 +175,12 @@ extension FxAViewController: FxAPushLoginDelegate {
             self.delegate?.contentViewControllerDidCancel(self)
         }
     }
+}
+
+struct FxALaunchParams {
+    var view: String?
+    var email: String?
+    var access_code: String?
 }
 
 /*

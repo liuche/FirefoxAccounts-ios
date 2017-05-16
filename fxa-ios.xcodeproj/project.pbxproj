@@ -46,6 +46,7 @@
 		230DFBE41EA7EC7D0051A811 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		230DFBFF1EAEAC4B0051A811 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBFE1EAEAC4B0051A811 /* NSLayoutConstraint.swift */; };
 		230DFC031EAECB160051A811 /* FxASignIn.js in Resources */ = {isa = PBXBuildFile; fileRef = 230DFC011EAECB090051A811 /* FxASignIn.js */; };
+		231AE9B91EC68D3E00397F24 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231AE9B81EC68D3E00397F24 /* ExampleViewController.swift */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6331E9DAEB100C6EBAB /* FxAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */; };
 		23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */; };
@@ -220,9 +221,10 @@
 		230DFBF81EA7EE380051A811 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		230DFBFE1EAEAC4B0051A811 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraint.swift; path = Extensions/NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		230DFC011EAECB090051A811 /* FxASignIn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FxASignIn.js; sourceTree = "<group>"; };
+		231AE9B81EC68D3E00397F24 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FxAViewController.swift; sourceTree = "<group>"; };
+		23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FxAViewController.swift; path = "../fxa-ios/FxAViewController.swift"; sourceTree = "<group>"; };
 		23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23EAF63A1E9DAEB100C6EBAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23EAF63C1E9DAEB100C6EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -420,10 +422,10 @@
 			isa = PBXGroup;
 			children = (
 				23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */,
-				23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */,
 				23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */,
 				23EAF6391E9DAEB100C6EBAB /* LaunchScreen.storyboard */,
 				23EAF63C1E9DAEB100C6EBAB /* Info.plist */,
+				231AE9B81EC68D3E00397F24 /* ExampleViewController.swift */,
 			);
 			path = "fxa-ios";
 			sourceTree = "<group>";
@@ -474,6 +476,7 @@
 		23EDF0021E9EE73700F530CF /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */,
 				23EDF01E1E9EE74500F530CF /* Account-Bridging-Header.h */,
 				23EDF0201E9EE74500F530CF /* FirefoxAccount.swift */,
 				23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */,
@@ -820,6 +823,7 @@
 				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
 				23EAF6331E9DAEB100C6EBAB /* FxAViewController.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
+				231AE9B91EC68D3E00397F24 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

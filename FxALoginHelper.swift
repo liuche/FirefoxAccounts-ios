@@ -47,7 +47,7 @@ class FxALoginHelper {
     // This configures the helper for logging into Firefox Accounts, and
     // if already logged in, checking if anything needs to be done in response
     // to changing of user settings and push notifications.
-    func application(_ application: UIApplication, didLoadProfile profile: Profile) {
+    func application(didLoadProfile profile: Profile) {
         self.profile = profile
         guard let account = profile.getAccount() else {
             // There's no account, no further action.
@@ -69,7 +69,6 @@ class FxALoginHelper {
         // Now: we have an account that does not have push notifications set up.
         // however, we need to deal with cases of asking for permissions too frequently.
         let asked = profile.prefs.boolForKey(applicationDidRequestUserNotificationPermissionPrefKey) ?? true
-        let permitted = application.currentUserNotificationSettings!.types != .none
 
         // If we've never asked(*), then we should probably ask.
         // If we've asked already, then we should not ask again.
@@ -77,7 +76,7 @@ class FxALoginHelper {
         // (*) if we asked in a prior release, and the user was ok with it, then there is no harm asking again.
         // If the user denied permission, or flipped permissions in the Settings app, then 
         // we'll bug them once, but this is probably unavoidable.
-        if asked && !permitted {
+        if asked {
             return loginDidSucceed()
         }
 
@@ -86,7 +85,6 @@ class FxALoginHelper {
         // the notification in the Settings app.
 
         self.account = account
-//        requestUserNotifications(application)
     }
 
     // This is called when the user logs into a new FxA account.
