@@ -533,6 +533,7 @@ open class BrowserProfile: Profile {
             return StageFirefoxAccountConfiguration()
         }
  */
+        // XXX: Create accounts on Stage server
         return StageFirefoxAccountConfiguration()
     }
 
