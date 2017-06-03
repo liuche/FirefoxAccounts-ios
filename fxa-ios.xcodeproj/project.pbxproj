@@ -59,8 +59,6 @@
 		230DFBB81EA56D8C0051A811 /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB71EA56D8C0051A811 /* AlamofireExtensions.swift */; };
 		230DFBBB1EA5709F0051A811 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB91EA5709F0051A811 /* AppConstants.swift */; };
 		230DFBBC1EA5709F0051A811 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBBA1EA5709F0051A811 /* NotificationConstants.swift */; };
-		230DFBC71EA595E00051A811 /* NSUserDefaultsPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC31EA5943E0051A811 /* NSUserDefaultsPrefs.swift */; };
-		230DFBC81EA595F20051A811 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC41EA5943E0051A811 /* Profile.swift */; };
 		230DFBCC1EA59ADE0051A811 /* FxA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		230DFBD21EA6C7940051A811 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230DFBD11EA6C7940051A811 /* Info.plist */; };
 		230DFBD31EA6CA180051A811 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
@@ -72,12 +70,18 @@
 		231AEA381ECE702000397F24 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 231AEA361ECE702000397F24 /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		231AEA3B1ECE702000397F24 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231AEA341ECE702000397F24 /* Storage.framework */; };
 		231AEA3C1ECE702000397F24 /* Storage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 231AEA341ECE702000397F24 /* Storage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23511E0A1EE23A62002B5507 /* FxAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23511E081EE23A62002B5507 /* FxAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23511E0D1EE23A62002B5507 /* FxAUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E061EE23A62002B5507 /* FxAUtils.framework */; };
+		23511E0E1EE23A62002B5507 /* FxAUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E061EE23A62002B5507 /* FxAUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23511E151EE23A88002B5507 /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23511E131EE23A88002B5507 /* FxALoginHelper.swift */; };
+		23511E161EE23A88002B5507 /* FxAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23511E141EE23A88002B5507 /* FxAViewController.swift */; };
+		23511E1F1EE5DB5C002B5507 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC41EA5943E0051A811 /* Profile.swift */; };
+		23511E201EE5DB66002B5507 /* NSUserDefaultsPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC31EA5943E0051A811 /* NSUserDefaultsPrefs.swift */; };
+		23511E221EE5DF85002B5507 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
-		23EAF6331E9DAEB100C6EBAB /* FxAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */; };
 		23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */; };
 		23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6391E9DAEB100C6EBAB /* LaunchScreen.storyboard */; };
 		23EAF6461E9DAEB100C6EBAB /* fxa_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6451E9DAEB100C6EBAB /* fxa_iosTests.swift */; };
-		23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */; };
 		23EAF65D1E9EC82800C6EBAB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65C1E9EC82800C6EBAB /* Cartfile */; };
 		23EAF6601E9EC9A600C6EBAB /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */; };
 		23EDEFE71E9EE72B00F530CF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; };
@@ -164,6 +168,13 @@
 			remoteGlobalIDString = 231AEA331ECE702000397F24;
 			remoteInfo = Storage;
 		};
+		23511E0B1EE23A62002B5507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23511E051EE23A62002B5507;
+			remoteInfo = FxAUtils;
+		};
 		23EAF6421E9DAEB100C6EBAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
@@ -217,6 +228,7 @@
 			files = (
 				230A30BB1ED3CC42006D0B0E /* Sync.framework in Embed Frameworks */,
 				23EDF0171E9EE73700F530CF /* Account.framework in Embed Frameworks */,
+				23511E0E1EE23A62002B5507 /* FxAUtils.framework in Embed Frameworks */,
 				230DFBE41EA7EC7D0051A811 /* Shared.framework in Embed Frameworks */,
 				231AEA3C1ECE702000397F24 /* Storage.framework in Embed Frameworks */,
 				230DFBCC1EA59ADE0051A811 /* FxA.framework in Embed Frameworks */,
@@ -287,16 +299,20 @@
 		231AEA341ECE702000397F24 /* Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231AEA361ECE702000397F24 /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
 		231AEA371ECE702000397F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23511E061EE23A62002B5507 /* FxAUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FxAUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23511E081EE23A62002B5507 /* FxAUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FxAUtils.h; sourceTree = "<group>"; };
+		23511E091EE23A62002B5507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23511E131EE23A88002B5507 /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
+		23511E141EE23A88002B5507 /* FxAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxAViewController.swift; sourceTree = "<group>"; };
+		23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = "<group>"; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FxAViewController.swift; path = "../fxa-ios/FxAViewController.swift"; sourceTree = "<group>"; };
 		23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23EAF63A1E9DAEB100C6EBAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23EAF63C1E9DAEB100C6EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EAF6411E9DAEB100C6EBAB /* fxa-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fxa-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6451E9DAEB100C6EBAB /* fxa_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fxa_iosTests.swift; sourceTree = "<group>"; };
 		23EAF6471E9DAEB100C6EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
 		23EAF65C1E9EC82800C6EBAB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -344,12 +360,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23511E021EE23A62002B5507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23511E221EE5DF85002B5507 /* SwiftKeychainWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23EAF62A1E9DAEB100C6EBAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				230A30BA1ED3CC42006D0B0E /* Sync.framework in Frameworks */,
 				230DFBD31EA6CA180051A811 /* Alamofire.framework in Frameworks */,
+				23511E0D1EE23A62002B5507 /* FxAUtils.framework in Frameworks */,
 				230DFBE31EA7EC7D0051A811 /* Shared.framework in Frameworks */,
 				231AEA3B1ECE702000397F24 /* Storage.framework in Frameworks */,
 				23EDF0161E9EE73700F530CF /* Account.framework in Frameworks */,
@@ -533,6 +558,17 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		23511E071EE23A62002B5507 /* FxAUtils */ = {
+			isa = PBXGroup;
+			children = (
+				23511E131EE23A88002B5507 /* FxALoginHelper.swift */,
+				23511E141EE23A88002B5507 /* FxAViewController.swift */,
+				23511E081EE23A62002B5507 /* FxAUtils.h */,
+				23511E091EE23A62002B5507 /* Info.plist */,
+			);
+			path = FxAUtils;
+			sourceTree = "<group>";
+		};
 		23EAF6241E9DAEB100C6EBAB = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +578,7 @@
 				23EDF0021E9EE73700F530CF /* Account */,
 				231AEA351ECE702000397F24 /* Storage */,
 				230A30B41ED3CC42006D0B0E /* Sync */,
+				23511E071EE23A62002B5507 /* FxAUtils */,
 				23EAF6621E9ECB7E00C6EBAB /* Frameworks */,
 				23EAF62F1E9DAEB100C6EBAB /* fxa-ios */,
 				23EAF6441E9DAEB100C6EBAB /* fxa-iosTests */,
@@ -550,7 +587,6 @@
 				230DFB2E1EA05F920051A811 /* Push */,
 				23EDEFDF1E9EE72B00F530CF /* Shared */,
 				230DFB211EA05D360051A811 /* ThirdParty */,
-				23EAF6501E9DAF2300C6EBAB /* FxALoginHelper.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -565,6 +601,7 @@
 				23EDF0091E9EE73700F530CF /* AccountTests.xctest */,
 				231AEA341ECE702000397F24 /* Storage.framework */,
 				230A30B31ED3CC42006D0B0E /* Sync.framework */,
+				23511E061EE23A62002B5507 /* FxAUtils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -593,6 +630,7 @@
 		23EAF6621E9ECB7E00C6EBAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */,
 				230DFBF81EA7EE380051A811 /* SwiftyJSON.framework */,
 				230DFB2B1EA05E1B0051A811 /* Deferred.framework */,
 				23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */,
@@ -628,7 +666,6 @@
 		23EDF0021E9EE73700F530CF /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				23EAF6321E9DAEB100C6EBAB /* FxAViewController.swift */,
 				23EDF01E1E9EE74500F530CF /* Account-Bridging-Header.h */,
 				23EDF0201E9EE74500F530CF /* FirefoxAccount.swift */,
 				23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */,
@@ -683,6 +720,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				231AEA381ECE702000397F24 /* Storage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23511E031EE23A62002B5507 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23511E0A1EE23A62002B5507 /* FxAUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +786,24 @@
 			productReference = 231AEA341ECE702000397F24 /* Storage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		23511E051EE23A62002B5507 /* FxAUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23511E121EE23A62002B5507 /* Build configuration list for PBXNativeTarget "FxAUtils" */;
+			buildPhases = (
+				23511E011EE23A62002B5507 /* Sources */,
+				23511E021EE23A62002B5507 /* Frameworks */,
+				23511E031EE23A62002B5507 /* Headers */,
+				23511E041EE23A62002B5507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FxAUtils;
+			productName = FxAUtils;
+			productReference = 23511E061EE23A62002B5507 /* FxAUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		23EAF62C1E9DAEB100C6EBAB /* fxa-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23EAF64A1E9DAEB100C6EBAB /* Build configuration list for PBXNativeTarget "fxa-ios" */;
@@ -759,6 +822,7 @@
 				230DFBE61EA7EC7D0051A811 /* PBXTargetDependency */,
 				231AEA3A1ECE702000397F24 /* PBXTargetDependency */,
 				230A30B91ED3CC42006D0B0E /* PBXTargetDependency */,
+				23511E0C1EE23A62002B5507 /* PBXTargetDependency */,
 			);
 			name = "fxa-ios";
 			productName = "fxa-ios";
@@ -880,6 +944,12 @@
 						DevelopmentTeam = 9P7FQVD9YW;
 						ProvisioningStyle = Automatic;
 					};
+					23511E051EE23A62002B5507 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 9P7FQVD9YW;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 					23EAF62C1E9DAEB100C6EBAB = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 9P7FQVD9YW;
@@ -939,6 +1009,7 @@
 				23EDF0081E9EE73700F530CF /* AccountTests */,
 				231AEA331ECE702000397F24 /* Storage */,
 				230A30B21ED3CC42006D0B0E /* Sync */,
+				23511E051EE23A62002B5507 /* FxAUtils */,
 			);
 		};
 /* End PBXProject section */
@@ -969,6 +1040,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		231AEA321ECE702000397F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23511E041EE23A62002B5507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1078,14 +1156,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23511E011EE23A62002B5507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23511E201EE5DB66002B5507 /* NSUserDefaultsPrefs.swift in Sources */,
+				23511E161EE23A88002B5507 /* FxAViewController.swift in Sources */,
+				23511E1F1EE5DB5C002B5507 /* Profile.swift in Sources */,
+				23511E151EE23A88002B5507 /* FxALoginHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23EAF6291E9DAEB100C6EBAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230DFBC71EA595E00051A811 /* NSUserDefaultsPrefs.swift in Sources */,
-				230DFBC81EA595F20051A811 /* Profile.swift in Sources */,
-				23EAF6511E9DAF2300C6EBAB /* FxALoginHelper.swift in Sources */,
-				23EAF6331E9DAEB100C6EBAB /* FxAViewController.swift in Sources */,
 				23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */,
 				231AE9B91EC68D3E00397F24 /* ExampleViewController.swift in Sources */,
 			);
@@ -1208,6 +1293,11 @@
 			isa = PBXTargetDependency;
 			target = 231AEA331ECE702000397F24 /* Storage */;
 			targetProxy = 231AEA391ECE702000397F24 /* PBXContainerItemProxy */;
+		};
+		23511E0C1EE23A62002B5507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23511E051EE23A62002B5507 /* FxAUtils */;
+			targetProxy = 23511E0B1EE23A62002B5507 /* PBXContainerItemProxy */;
 		};
 		23EAF6431E9DAEB100C6EBAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1344,6 +1434,61 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = allizom.Storage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23511E0F1EE23A62002B5507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9P7FQVD9YW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FxAUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = allizom.FxAUtils;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23511E101EE23A62002B5507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9P7FQVD9YW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FxAUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = allizom.FxAUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1693,6 +1838,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		23511E121EE23A62002B5507 /* Build configuration list for PBXNativeTarget "FxAUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23511E0F1EE23A62002B5507 /* Debug */,
+				23511E101EE23A62002B5507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		23EAF6281E9DAEB100C6EBAB /* Build configuration list for PBXProject "fxa-ios" */ = {
 			isa = XCConfigurationList;
