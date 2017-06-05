@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		230A30B71ED3CC42006D0B0E /* Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 230A30B51ED3CC42006D0B0E /* Sync.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		230A30BA1ED3CC42006D0B0E /* Sync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230A30B31ED3CC42006D0B0E /* Sync.framework */; };
-		230A30BB1ED3CC42006D0B0E /* Sync.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 230A30B31ED3CC42006D0B0E /* Sync.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		230A30C11ED3CCE0006D0B0E /* StorageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230A30C01ED3CCE0006D0B0E /* StorageClient.swift */; };
 		230A30C21ED3CD32006D0B0E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
 		230A30C41ED4D792006D0B0E /* KeyBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230A30C31ED4D792006D0B0E /* KeyBundle.swift */; };
@@ -59,25 +57,18 @@
 		230DFBB81EA56D8C0051A811 /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB71EA56D8C0051A811 /* AlamofireExtensions.swift */; };
 		230DFBBB1EA5709F0051A811 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBB91EA5709F0051A811 /* AppConstants.swift */; };
 		230DFBBC1EA5709F0051A811 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBBA1EA5709F0051A811 /* NotificationConstants.swift */; };
-		230DFBCC1EA59ADE0051A811 /* FxA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 230DFB281EA05D530051A811 /* FxA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		230DFBD21EA6C7940051A811 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230DFBD11EA6C7940051A811 /* Info.plist */; };
-		230DFBD31EA6CA180051A811 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EAF6631E9ECB7E00C6EBAB /* Alamofire.framework */; };
-		230DFBE31EA7EC7D0051A811 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; };
-		230DFBE41EA7EC7D0051A811 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		230DFBFF1EAEAC4B0051A811 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBFE1EAEAC4B0051A811 /* NSLayoutConstraint.swift */; };
 		230DFC031EAECB160051A811 /* FxASignIn.js in Resources */ = {isa = PBXBuildFile; fileRef = 230DFC011EAECB090051A811 /* FxASignIn.js */; };
 		231AE9B91EC68D3E00397F24 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231AE9B81EC68D3E00397F24 /* ExampleViewController.swift */; };
-		231AEA381ECE702000397F24 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 231AEA361ECE702000397F24 /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		231AEA3B1ECE702000397F24 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231AEA341ECE702000397F24 /* Storage.framework */; };
-		231AEA3C1ECE702000397F24 /* Storage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 231AEA341ECE702000397F24 /* Storage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23511E0A1EE23A62002B5507 /* FxAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23511E081EE23A62002B5507 /* FxAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23511E0D1EE23A62002B5507 /* FxAUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E061EE23A62002B5507 /* FxAUtils.framework */; };
-		23511E0E1EE23A62002B5507 /* FxAUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E061EE23A62002B5507 /* FxAUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23511E151EE23A88002B5507 /* FxALoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23511E131EE23A88002B5507 /* FxALoginHelper.swift */; };
 		23511E161EE23A88002B5507 /* FxAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23511E141EE23A88002B5507 /* FxAViewController.swift */; };
 		23511E1F1EE5DB5C002B5507 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC41EA5943E0051A811 /* Profile.swift */; };
 		23511E201EE5DB66002B5507 /* NSUserDefaultsPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DFBC31EA5943E0051A811 /* NSUserDefaultsPrefs.swift */; };
 		23511E221EE5DF85002B5507 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */; };
+		23511E231EE61311002B5507 /* FxAUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23511E061EE23A62002B5507 /* FxAUtils.framework */; };
+		239684EC1EE61E8A00EE14AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239684EB1EE61E8A00EE14AE /* AVFoundation.framework */; };
 		23EAF6311E9DAEB100C6EBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */; };
 		23EAF6381E9DAEB100C6EBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */; };
 		23EAF63B1E9DAEB100C6EBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF6391E9DAEB100C6EBAB /* LaunchScreen.storyboard */; };
@@ -86,8 +77,6 @@
 		23EAF6601E9EC9A600C6EBAB /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */; };
 		23EDEFE71E9EE72B00F530CF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDEFDE1E9EE72B00F530CF /* Shared.framework */; };
 		23EDF00A1E9EE73700F530CF /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; };
-		23EDF0161E9EE73700F530CF /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; };
-		23EDF0171E9EE73700F530CF /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EDF0011E9EE73600F530CF /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23EDF02B1E9EE74500F530CF /* Account-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EDF01E1E9EE74500F530CF /* Account-Bridging-Header.h */; };
 		23EDF02D1E9EE74500F530CF /* FirefoxAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0201E9EE74500F530CF /* FirefoxAccount.swift */; };
 		23EDF02E1E9EE74500F530CF /* FirefoxAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF0211E9EE74500F530CF /* FirefoxAccountConfiguration.swift */; };
@@ -112,13 +101,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		230A30B81ED3CC42006D0B0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 230A30B21ED3CC42006D0B0E;
-			remoteInfo = Sync;
-		};
 		230DFB271EA05D530051A811 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
@@ -147,33 +129,19 @@
 			remoteGlobalIDString = 28F951FA19D0F9FA00DCE892;
 			remoteInfo = FxA;
 		};
-		230DFBCD1EA59ADE0051A811 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 230DFB221EA05D520051A811 /* FxA.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 28F951FA19D0F9FA00DCE892;
-			remoteInfo = FxA;
-		};
-		230DFBE51EA7EC7D0051A811 /* PBXContainerItemProxy */ = {
+		23511E261EE61D31002B5507 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 23EDEFDD1E9EE72B00F530CF;
 			remoteInfo = Shared;
 		};
-		231AEA391ECE702000397F24 /* PBXContainerItemProxy */ = {
+		23511E281EE61DE4002B5507 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 231AEA331ECE702000397F24;
-			remoteInfo = Storage;
-		};
-		23511E0B1EE23A62002B5507 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23511E051EE23A62002B5507;
-			remoteInfo = FxAUtils;
+			remoteGlobalIDString = 23EDF0001E9EE73600F530CF;
+			remoteInfo = Account;
 		};
 		23EAF6421E9DAEB100C6EBAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -210,33 +178,7 @@
 			remoteGlobalIDString = 23EAF62C1E9DAEB100C6EBAB;
 			remoteInfo = "fxa-ios";
 		};
-		23EDF0141E9EE73700F530CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23EAF6251E9DAEB100C6EBAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23EDF0001E9EE73600F530CF;
-			remoteInfo = Account;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		23EDEFFA1E9EE72B00F530CF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				230A30BB1ED3CC42006D0B0E /* Sync.framework in Embed Frameworks */,
-				23EDF0171E9EE73700F530CF /* Account.framework in Embed Frameworks */,
-				23511E0E1EE23A62002B5507 /* FxAUtils.framework in Embed Frameworks */,
-				230DFBE41EA7EC7D0051A811 /* Shared.framework in Embed Frameworks */,
-				231AEA3C1ECE702000397F24 /* Storage.framework in Embed Frameworks */,
-				230DFBCC1EA59ADE0051A811 /* FxA.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		230A30B31ED3CC42006D0B0E /* Sync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,14 +239,13 @@
 		230DFC011EAECB090051A811 /* FxASignIn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FxASignIn.js; sourceTree = "<group>"; };
 		231AE9B81EC68D3E00397F24 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		231AEA341ECE702000397F24 /* Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		231AEA361ECE702000397F24 /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
-		231AEA371ECE702000397F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23511E061EE23A62002B5507 /* FxAUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FxAUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23511E081EE23A62002B5507 /* FxAUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FxAUtils.h; sourceTree = "<group>"; };
 		23511E091EE23A62002B5507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23511E131EE23A88002B5507 /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxALoginHelper.swift; sourceTree = "<group>"; };
 		23511E141EE23A88002B5507 /* FxAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxAViewController.swift; sourceTree = "<group>"; };
 		23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = "<group>"; };
+		239684EB1EE61E8A00EE14AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		23EAF62D1E9DAEB100C6EBAB /* fxa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fxa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAF6301E9DAEB100C6EBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAF6371E9DAEB100C6EBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -372,12 +313,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230A30BA1ED3CC42006D0B0E /* Sync.framework in Frameworks */,
-				230DFBD31EA6CA180051A811 /* Alamofire.framework in Frameworks */,
-				23511E0D1EE23A62002B5507 /* FxAUtils.framework in Frameworks */,
-				230DFBE31EA7EC7D0051A811 /* Shared.framework in Frameworks */,
-				231AEA3B1ECE702000397F24 /* Storage.framework in Frameworks */,
-				23EDF0161E9EE73700F530CF /* Account.framework in Frameworks */,
+				23511E231EE61311002B5507 /* FxAUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239684EC1EE61E8A00EE14AE /* AVFoundation.framework in Frameworks */,
 				23EDF0421E9EE87800F530CF /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,15 +486,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		231AEA351ECE702000397F24 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				231AEA361ECE702000397F24 /* Storage.h */,
-				231AEA371ECE702000397F24 /* Info.plist */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		23511E071EE23A62002B5507 /* FxAUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,7 +504,6 @@
 				23EAF65C1E9EC82800C6EBAB /* Cartfile */,
 				23EAF65E1E9EC9A600C6EBAB /* Cartfile.resolved */,
 				23EDF0021E9EE73700F530CF /* Account */,
-				231AEA351ECE702000397F24 /* Storage */,
 				230A30B41ED3CC42006D0B0E /* Sync */,
 				23511E071EE23A62002B5507 /* FxAUtils */,
 				23EAF6621E9ECB7E00C6EBAB /* Frameworks */,
@@ -630,6 +557,7 @@
 		23EAF6621E9ECB7E00C6EBAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				239684EB1EE61E8A00EE14AE /* AVFoundation.framework */,
 				23511E211EE5DF85002B5507 /* SwiftKeychainWrapper.framework */,
 				230DFBF81EA7EE380051A811 /* SwiftyJSON.framework */,
 				230DFB2B1EA05E1B0051A811 /* Deferred.framework */,
@@ -719,7 +647,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				231AEA381ECE702000397F24 /* Storage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +725,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				23511E291EE61DE4002B5507 /* PBXTargetDependency */,
+				23511E271EE61D31002B5507 /* PBXTargetDependency */,
 			);
 			name = FxAUtils;
 			productName = FxAUtils;
@@ -812,17 +741,10 @@
 				23EAF6291E9DAEB100C6EBAB /* Sources */,
 				23EAF62A1E9DAEB100C6EBAB /* Frameworks */,
 				23EAF62B1E9DAEB100C6EBAB /* Resources */,
-				23EDEFFA1E9EE72B00F530CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				230DFBCE1EA59ADE0051A811 /* PBXTargetDependency */,
-				23EDF0151E9EE73700F530CF /* PBXTargetDependency */,
-				230DFBE61EA7EC7D0051A811 /* PBXTargetDependency */,
-				231AEA3A1ECE702000397F24 /* PBXTargetDependency */,
-				230A30B91ED3CC42006D0B0E /* PBXTargetDependency */,
-				23511E0C1EE23A62002B5507 /* PBXTargetDependency */,
 			);
 			name = "fxa-ios";
 			productName = "fxa-ios";
@@ -1264,11 +1186,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		230A30B91ED3CC42006D0B0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 230A30B21ED3CC42006D0B0E /* Sync */;
-			targetProxy = 230A30B81ED3CC42006D0B0E /* PBXContainerItemProxy */;
-		};
 		230DFB4D1EA06E860051A811 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 23EDEFDD1E9EE72B00F530CF /* Shared */;
@@ -1279,25 +1196,15 @@
 			name = FxA;
 			targetProxy = 230DFB4E1EA06F250051A811 /* PBXContainerItemProxy */;
 		};
-		230DFBCE1EA59ADE0051A811 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FxA;
-			targetProxy = 230DFBCD1EA59ADE0051A811 /* PBXContainerItemProxy */;
-		};
-		230DFBE61EA7EC7D0051A811 /* PBXTargetDependency */ = {
+		23511E271EE61D31002B5507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 23EDEFDD1E9EE72B00F530CF /* Shared */;
-			targetProxy = 230DFBE51EA7EC7D0051A811 /* PBXContainerItemProxy */;
+			targetProxy = 23511E261EE61D31002B5507 /* PBXContainerItemProxy */;
 		};
-		231AEA3A1ECE702000397F24 /* PBXTargetDependency */ = {
+		23511E291EE61DE4002B5507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 231AEA331ECE702000397F24 /* Storage */;
-			targetProxy = 231AEA391ECE702000397F24 /* PBXContainerItemProxy */;
-		};
-		23511E0C1EE23A62002B5507 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23511E051EE23A62002B5507 /* FxAUtils */;
-			targetProxy = 23511E0B1EE23A62002B5507 /* PBXContainerItemProxy */;
+			target = 23EDF0001E9EE73600F530CF /* Account */;
+			targetProxy = 23511E281EE61DE4002B5507 /* PBXContainerItemProxy */;
 		};
 		23EAF6431E9DAEB100C6EBAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1323,11 +1230,6 @@
 			isa = PBXTargetDependency;
 			target = 23EAF62C1E9DAEB100C6EBAB /* fxa-ios */;
 			targetProxy = 23EDF00D1E9EE73700F530CF /* PBXContainerItemProxy */;
-		};
-		23EDF0151E9EE73700F530CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23EDF0001E9EE73600F530CF /* Account */;
-			targetProxy = 23EDF0141E9EE73700F530CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1595,7 +1497,6 @@
 		23EAF64B1E9DAEB100C6EBAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P7FQVD9YW;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1613,7 +1514,6 @@
 		23EAF64C1E9DAEB100C6EBAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P7FQVD9YW;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1846,6 +1746,7 @@
 				23511E101EE23A62002B5507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23EAF6281E9DAEB100C6EBAB /* Build configuration list for PBXProject "fxa-ios" */ = {
 			isa = XCConfigurationList;

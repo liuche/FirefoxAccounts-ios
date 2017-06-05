@@ -4,6 +4,7 @@
 
 import Foundation
 import UIKit
+import FxAUtils
 
 class ExampleViewController: UIViewController {
     var textButton: UIButton

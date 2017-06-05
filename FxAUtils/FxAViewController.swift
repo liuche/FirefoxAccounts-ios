@@ -12,7 +12,7 @@ protocol FxAContentViewControllerDelegate: class {
     func contentViewControllerDidCancel(_ viewController: FxAViewController)
 }
 
-class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
+open class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     var fxaOptions = FxALaunchParams()
     let profile: Profile
     let url: URL!
@@ -28,7 +28,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         case signOut = "sign_out"
     }
 
-    init() {
+    public init() {
         let fxaLoginHelper = FxALoginHelper.sharedInstance
         let profile = BrowserProfile(localName: "profile")
         fxaLoginHelper.application(didLoadProfile: profile)
@@ -37,11 +37,11 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.white
@@ -85,7 +85,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         return webView
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -139,7 +139,7 @@ class FxAViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     }
 
     // Dispatch webkit messages originating from our child webview.
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         // Make sure we're communicating with a trusted page. That is, ensure the origin of the
         // message is the same as the origin of the URL we initially loaded in this web view.
         // Note that this exploit wouldn't be possible if we were using WebChannels; see
