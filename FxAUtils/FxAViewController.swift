@@ -175,6 +175,7 @@ extension FxAViewController: FxAPushLoginDelegate {
                 }
                 // TODO: Return SyncClient object, for making get* calls
                 let client = FxASyncClient(token: tst)
+                client.getHistory()
             }
             self.dismiss(animated: true, completion: nil)
         }
