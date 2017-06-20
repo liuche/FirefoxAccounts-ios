@@ -573,7 +573,7 @@ open class Sync15StorageClient {
         }
     }
 
-    func getCryptoKeys(_ syncKeyBundle: KeyBundle, ifUnmodifiedSince: Timestamp?) -> Deferred<Maybe<StorageResponse<Record<KeysPayload>>>> {
+    public func getCryptoKeys(_ syncKeyBundle: KeyBundle, ifUnmodifiedSince: Timestamp?) -> Deferred<Maybe<StorageResponse<Record<KeysPayload>>>> {
         let syncKey = Keys(defaultBundle: syncKeyBundle)
         let encoder = RecordEncoder<KeysPayload>(decode: { KeysPayload($0) }, encode: { $0.json })
         let encrypter = syncKey.encrypter("keys", encoder: encoder)

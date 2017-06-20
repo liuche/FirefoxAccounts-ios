@@ -530,8 +530,8 @@ open class BrowserProfile: Profile {
             return StageFirefoxAccountConfiguration()
         }
  */
-        // XXX: Create accounts on Stage server
-        return StageFirefoxAccountConfiguration()
+        // TODO: Switch back to staging server; Prod for testing
+        return ProductionFirefoxAccountConfiguration()
     }
 
     fileprivate lazy var account: FirefoxAccount? = {

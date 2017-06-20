@@ -169,12 +169,12 @@ extension FxAViewController: FxAPushLoginDelegate {
             let token = self.profile.getAccount()!.syncAuthState.token(Date.now(), canBeExpired: false)
             token.upon { result in
                 print("token result!")
-                guard let tst = token.value.successValue?.token else {
+                guard let tst = token.value.successValue?.token, let key = token.value.successValue?.forKey else {
                     print("No token")
                     return
                 }
                 // TODO: Return SyncClient object, for making get* calls
-                let client = FxASyncClient(token: tst)
+                let client = FxASyncClient(token: tst, key: key)
                 client.getHistory()
             }
             self.dismiss(animated: true, completion: nil)
