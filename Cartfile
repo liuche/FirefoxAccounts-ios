@@ -1,8 +1,5 @@
 github "Alamofire/Alamofire"                ~> 4.0
 github "sleroux/Deferred"                   "Swift3.0"
-
-github "rs/SDWebImage"                      "3.7.4"
-
 github "jrendel/SwiftKeychainWrapper"       "3.0.1"
 github "DaveWoodCom/XCGLogger"              "Version_4.0.0"
 github "SwiftyJSON/SwiftyJSON"              "3.1.4"

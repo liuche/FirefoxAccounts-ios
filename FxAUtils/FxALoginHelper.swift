@@ -134,7 +134,7 @@ open class FxALoginHelper {
     // This is called when the user logs into a new FxA account.
     // It manages the asking for user permission for notification and registration
     // for APNS and WebPush notifications.
-    func application(_ application: UIApplication, didReceiveAccountJSON data: JSON) {
+    public func application(_ application: UIApplication, didReceiveAccountJSON data: JSON) {
         if data["keyFetchToken"].stringValue() == nil || data["unwrapBKey"].stringValue() == nil {
             // The /settings endpoint sends a partial "login"; ignore it entirely.
             log.error("Ignoring didSignIn with keyFetchToken or unwrapBKey missing.")
@@ -154,7 +154,11 @@ open class FxALoginHelper {
 //            account.updateProfile()
 //        }
 
-        requestUserNotifications(application)
+        if AppConstants.MOZ_FXA_PUSH {
+            requestUserNotifications(application)
+        } else {
+            loginDidSucceed()
+        }
     }
 
     func getDeviceToken(_ application: UIApplication) -> Deferred<Maybe<String>> {
@@ -209,7 +213,7 @@ open class FxALoginHelper {
         return label?.toConfiguration()
     }
 
-    func apnsRegisterDidSucceed(_ deviceToken: Data) {
+    public func apnsRegisterDidSucceed(_ deviceToken: Data) {
         let apnsToken = deviceToken.hexEncodedString
         self.apnsTokenDeferred?.fillIfUnfilled(Maybe(success: apnsToken))
         self.apnsRegisterDidSucceed(apnsToken)
@@ -242,7 +246,7 @@ open class FxALoginHelper {
         }
     }
 
-    func apnsRegisterDidFail() {
+    public func apnsRegisterDidFail() {
         self.apnsTokenDeferred?.fillIfUnfilled(Maybe(failure: PushNotificationError.registrationFailed))
         readyForSyncing()
     }

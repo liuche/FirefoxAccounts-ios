@@ -5,7 +5,6 @@
 import Foundation
 import UIKit
 import FxAUtils
-import Shared
 
 class ExampleViewController: UIViewController {
     lazy var textButton: UIButton = {
@@ -67,7 +66,10 @@ class ExampleViewController: UIViewController {
         NSLayoutConstraint.activate(buttonConstraints, translatesAutoresizingMaskIntoConstraints: false)
         NSLayoutConstraint.activate(labelConstraints, translatesAutoresizingMaskIntoConstraints: false)
 
-        let names: [Notification.Name] = [.FirefoxAccountVerified, .ProfileDidStartSyncing, .ProfileDidFinishSyncing]
+        let names: [Notification.Name] = [NotificationNames.FirefoxAccountVerified,
+                                          NotificationNames.ProfileDidStartSyncing,
+                                          NotificationNames.ProfileDidFinishSyncing
+                                          ]
         observers = names.map { name in
             return NotificationCenter.default.addObserver(forName: name, object: nil, queue: .main, using: updateLabel(_:))
         }
