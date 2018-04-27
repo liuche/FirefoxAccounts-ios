@@ -157,7 +157,7 @@ open class FxALoginHelper {
         if AppConstants.MOZ_FXA_PUSH {
             requestUserNotifications(application)
         } else {
-            loginDidSucceed()
+            readyForSyncing()
         }
     }
 
