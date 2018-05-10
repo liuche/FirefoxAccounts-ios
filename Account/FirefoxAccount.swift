@@ -216,12 +216,12 @@ open class FirefoxAccount {
         }
     }
     
-    public class FxAProfile {
+    open class FxAProfile {
         open var displayName: String?
         open let email: String
         open let avatar: Avatar
         
-        init(email: String, displayName: String?, avatar: String?) {
+        public init(email: String, displayName: String?, avatar: String?) {
             self.email = email
             self.displayName = displayName
             self.avatar = Avatar(url: avatar?.asURL)
