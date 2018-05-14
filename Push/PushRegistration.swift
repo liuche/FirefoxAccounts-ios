@@ -14,7 +14,7 @@ public class PushRegistration: NSObject, NSCoding {
     // however, if/when we do, it'll make migrating easier if we have been serializing it like this all along.
     fileprivate var subscriptions: [String: PushSubscription]
 
-    var defaultSubscription: PushSubscription {
+    public var defaultSubscription: PushSubscription {
         return subscriptions[defaultSubscriptionID]!
     }
 
@@ -60,7 +60,7 @@ public class PushRegistration: NSObject, NSCoding {
 }
 
 fileprivate let defaultSubscriptionID = "defaultSubscription"
-/// Small NSCodable class for persisting a channel subscription. 
+/// Small NSCodable class for persisting a channel subscription.
 /// We use NSCoder because we expect it to be stored in the profile.
 public class PushSubscription: NSObject, NSCoding {
     let channelID: String
@@ -114,5 +114,16 @@ public class PushSubscription: NSObject, NSCoding {
         aCoder.encode(p256dhPrivateKey, forKey: "p256dhPrivateKey")
         aCoder.encode(p256dhPublicKey, forKey: "p256dhPublicKey")
         aCoder.encode(authKey, forKey: "authKey")
+    }
+}
+
+public extension PushSubscription {
+    public func aesgcm(payload: String, encryptionHeader: String, cryptoHeader: String) -> String? {
+        let headers = PushCryptoHeaders(encryption: encryptionHeader, cryptoKey: cryptoHeader)
+        return try? PushCrypto.sharedInstance.aesgcm(ciphertext: payload, withHeaders: headers, decryptWith: p256dhPrivateKey, authenticateWith: authKey)
+    }
+
+    public func aes128gcm(payload: String) -> String? {
+        return try? PushCrypto.sharedInstance.aes128gcm(payload: payload, decryptWith: p256dhPrivateKey, authenticateWith: authKey)
     }
 }
